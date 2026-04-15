@@ -17,9 +17,10 @@ check_file() {
 check_file "$HOME/CLAUDE.md"
 check_file "$HOME/.claude/settings.json"
 
-for f in dot-claude/commands/*.md; do
-  [ -e "$f" ] || continue
-  check_file "$HOME/.claude/commands/$(basename "$f")"
+for d in dot-claude/skills/*/; do
+  [ -d "$d" ] || continue
+  skill=$(basename "$d")
+  check_file "$HOME/.claude/skills/$skill/SKILL.md"
 done
 
 for f in dot-claude/agents/*.md; do

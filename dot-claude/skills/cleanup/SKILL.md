@@ -1,3 +1,9 @@
+---
+name: cleanup
+description: 프로젝트 점검 (문서 일치 확인, 규칙 위반 검출, 미사용 코드 정리)
+trigger: when the user asks to clean up the project or check for unused code and documentation consistency
+---
+
 $ARGUMENTS가 있으면 해당 파일만, 없으면 프로젝트 전체를 점검해줘:
 
 1. 문서(README, 주석, CLAUDE.md)가 실제 코드와 일치하는지
